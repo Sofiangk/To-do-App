@@ -22,6 +22,8 @@ Route::prefix('v1')->group(function () {
 
     Route::group(['middleware' => ['auth:sanctum']], function () {
 
+
+
     Route::prefix('tasks')->group(function () {
         Route::get('/task', [TaskController::class, 'index']);
         Route::post('/task', [TaskController::class, 'store']);
